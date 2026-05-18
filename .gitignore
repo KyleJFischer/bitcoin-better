@@ -9,3 +9,10 @@ __pycache__/
 *.pyc
 .pytest_cache/
 *.egg-info/
+venv/
+
+# Nix
+result
+
+# direnv
+.direnv/
