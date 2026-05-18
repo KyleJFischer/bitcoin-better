@@ -1,0 +1,11 @@
+# Data files (too large for git)
+data/*.csv
+
+# Trained models
+models/*.joblib
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
