@@ -1,4 +1,7 @@
+import os
 import tempfile
+
+import pandas as pd
 
 from src.prepare_data import load_raw_data, build_features, split_data
 
@@ -81,9 +84,6 @@ def test_split_data_default_80_20(raw_fixture):
     assert len(train) == 4   # int(6 * 0.8) = 4
     assert len(test) == 2
 
-
-import os
-import pandas as pd
 
 
 def test_full_pipeline(raw_fixture):

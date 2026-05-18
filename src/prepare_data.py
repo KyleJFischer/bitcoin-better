@@ -14,7 +14,7 @@ def load_raw_data(path: str) -> pd.DataFrame:
 
 def build_features(df: pd.DataFrame) -> pd.DataFrame:
     """Transform raw 1-minute data into labeled training samples."""
-    df = df.copy()
+    df = df.copy().sort_values('Timestamp').reset_index(drop=True)
     df['Timestamp'] = df['Timestamp'].astype('int64')
     df['datetime'] = pd.to_datetime(df['Timestamp'], unit='s', utc=True)
 
